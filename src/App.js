@@ -10,6 +10,7 @@ class App extends Component {
     return (
      <div>
       <h1>Pick One!</h1>
+      <button>10-Codes</button> <button>Signals</button>
       <div className='border' > Test Questions
       <ul>
         <li>A</li>

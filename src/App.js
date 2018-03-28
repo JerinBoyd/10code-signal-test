@@ -9,17 +9,24 @@ class App extends Component {
     
     return (
      <div>
-      <h1>Pick One!</h1>
-      <button>10-Codes</button> <button>Signals</button>
-      <div className='border' > Test Questions
-      <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-      </ul>
-       </div>
-      <button>Check Answer</button>
+    <body> 
+      <h1>10Code Quiz</h1>
+      <form>
+        <ol>
+        <li>10-1</li>
+          <ul>
+            <input type="radio" name="q1" value='incorrect' /> Receiving Well <br/>
+            <input type="radio" name="q1" value='correct' /> Receiving Poorly <br/>
+            <input type="radio" name="q1" value='incorrect' /> Emergency Traffic <br/>
+            <input type="radio" name="q1" value='incoreect'/> Acknowledged <br/>
+          </ul>
+        <li>10-2</li>
+        <li>10-3</li>
+        </ol>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </body>
       
      </div>
     );

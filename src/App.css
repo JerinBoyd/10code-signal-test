@@ -2,3 +2,7 @@
 .border {
     border: 500rem solid black
 }
+
+.dots {
+    list-style-type: none;
+}

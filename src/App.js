@@ -11,6 +11,7 @@ class App extends Component {
         
         {
           number: "10-1",
+          answerIndex: 1,
           answers: [
             'Receiving Poorly',
             'Receiving Well',
@@ -19,6 +20,7 @@ class App extends Component {
         },
         {
           number: "10-2",
+          answerIndex: 2,
           answers: [
             'Acknowledged',
             'Receiving Poorly',
@@ -27,6 +29,7 @@ class App extends Component {
         },
         {
           number: "10-3",
+          answerIndex: 3,
           answers: [
             'Disregard',
             'Speaking Too Fast',
@@ -39,29 +42,30 @@ class App extends Component {
   }
 
  
-check = () => {
+checkAnswer = (position, answerIndex) => {
   console.log('checked')
 }
   render() {
     return (
       <div>
-        <body>
-          <h1>10Code Quiz</h1>
+       
+          <h1>10 Code Quiz</h1>
 
-          {this.state.questions.map(q => (
+          {this.state.questions.map((q, index) => (
             <div>
               {" "}
-              <h1>{q.number}</h1>
+              <h2>{q.number}</h2>
               <ul >
                 {q.answers.map(answer => <li className="dots" >
                  <input type="radio" name="" id=""/> {answer}
                 </li  > )}
               </ul>
-               <button onClick={this.check} >Submit</button>{" "}
-              <button type="reset">Reset</button>{" "}
+               <button onClick= {() => {
+                 this.checkAnswer(index, q.answerIndex)}} >Submit</button>{" "}
+               <input type="reset" id="btnReset" value="Reset Count" />{" "}
             </div>
           ))}
-        </body>
+       
       </div>
     );
   }
